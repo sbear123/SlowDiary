@@ -1,1 +1,1 @@
-# SlowDiary
+# 느루일기(한꺼번에 몰아치지 아니하고 오래도록)(SlowDiary)
