@@ -3,6 +3,6 @@ var router = express.Router();
 const writeController = require('../controllers/write');
 
 /* GET home page. */
-router.get('/', writeController.baseAPI);
+router.get('/', writeController.login);
 
 module.exports = router;
