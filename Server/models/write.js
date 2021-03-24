@@ -18,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    userid: DataTypes.STRING,
     feel: DataTypes.STRING,
     praise: DataTypes.STRING,
     reflection: DataTypes.STRING,
