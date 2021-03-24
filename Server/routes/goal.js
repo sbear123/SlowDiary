@@ -3,12 +3,12 @@ var router = express.Router();
 const goalController = require('../controllers/goal');
 
 /* GET home page. */
-router.get('/create', goalController.createG);
+router.post('/create', goalController.createG);
 
 router.get('/read', goalController.readG);
 
-router.get('/update', goalController.updateG);
+router.patch('/update', goalController.updateG);
 
-router.get('/delete', goalController.deleteG);
+router.delete('/delete', goalController.deleteG);
 
 module.exports = router;
