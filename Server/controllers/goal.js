@@ -1,58 +1,62 @@
-var mysql_dbc = require('../config/database')();
-var connection = mysql_dbc.init();
+const models = require('../models')
 
-function login(req, res) {
-    connection.connect();
-    var sql = `SELECT * FROM user WHERE id = '${req.body.id} AND pw = '${req.body.pw}`;
-    connection.query(sql, function (error, rows, fields) {
-        if (!error) {
-            if (rows.length != 0) {
-                res.status(200).json({ "success": true });
-            } else {
-                res.status(200).json({ "success": false });
-            }
-        } else {
-            console.log('query error: ' + error);
-            res.status(404).send();
-        }
-    });
-    connection.end();
+function createG(req, res) {
+    var date = req.body.date.split('.')
+    models.Goal.create({
+        id: req.body.id,
+        year: date[0],
+        month: date[1],
+        goal: req.body.goal,
+    }).then((_)=> res.status(201).send())
+    .catch((_)=>res.status(404).send(_))
 };
 
-function checkId(req, res) {
-    connection.connect();
-    var sql = 'SELECT * FROM user WHERE id = ' + req.body.id;
-    connection.query(sql, function (error, rows, fields) {
-        if (!error) {
-            if (rows.length != 0) {
-                res.status(200).json({ "success": false });
-            } else {
-                res.status(200).json({ "success": true });
-            }
-        } else {
-            console.log('query error: ' + error);
-            res.status(404).send();
-        }
-    });
-    connection.end();
+function readG(req, res) {
+    var date = req.body.date.split('.')
+    models.Goal.findAll({
+        where: { 
+            id: req.body.id,
+            year: date[0],
+            month: date[1],
+         }
+    }).then((goal)=> res.status(200).json(goal))
+    .catch((_)=> res.status(404).send(_))
 };
 
-function register(req, res) {
-    connection.connect();
-    var sql = `INSERT INTO user VALUES ( ${req.body.id}, ${req.body.pw}, ${req.body.name}, ${req.body.age}, ${req.body.gender});`;
-    connection.query(sql, function (error, rows, fields) {
-        if (!error) {
-            res.status(200).json({ "success": true });
-        } else {
-            console.log('query error: ' + error);
-            res.status(404).send();
+function updateG(req, res) {
+    var date = req.body.date.split('.')
+    models.Goal.findOne({
+        where: {
+            id: req.body.id,
+            year: date[0],
+            month: date[1]
         }
-    });
-    connection.end();
+    }).then(user=> {
+        if (user) {
+          user.update({
+            pw: req.body.pw,
+            name: req.body.name,
+            age: req.body.age,
+            gender: req.body.gender
+          }).then((_) => res.status(200).json({ success: true }))
+          .catch((_) => res.status(404).send(_))
+        }
+      }).catch((_) => res.status(404).send(_))
+};
+
+function deleteG(req, res) {
+    var date = req.body.date.split('.')
+    models.Goal.destroy({ where: {
+        id: req.body.id,
+        year: date[0],
+        month: date[1]
+    }}).then(_ => res.status(204).send())
+    .catch((_) => res.status(404).send(_))
 };
 
 module.exports = {
-    login: login,
-    checkId: checkId,
-    register: register,
+    createG: createG,
+    readG: readG,
+    updateG: updateG,
+    deleteG: deleteG
 };
