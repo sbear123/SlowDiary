@@ -22,6 +22,7 @@ async function weather(req, res) {
 
         yesterday.temp = weatherJson.current.temp
         yesterday.weather = weatherJson.current.weather[0].description
+        yesterday.id = weatherJson.current.weather[0].id
         json.yesterday = yesterday
         
         url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${apiKey}&units=metric&lang=kr`
@@ -34,9 +35,11 @@ async function weather(req, res) {
 
             today.temp = weatherJson.current.temp
             today.weather = weatherJson.current.weather[0].description
+            today.id = weatherJson.current.weather[0].id
 
             tomorrow.temp = weatherJson.daily[0].temp.day
             tomorrow.weather = weatherJson.daily[0].weather[0].description
+            tomorrow.id = weatherJson.daily[0].weather[0].id
 
             json.today = today
             json.tomorrow = tomorrow
