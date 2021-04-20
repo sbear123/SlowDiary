@@ -9,4 +9,6 @@ router.get('/checkId', userController.checkId);
 
 router.post('/register', userController.register);
 
+router.patch('/update', userController.update)
+
 module.exports = router;

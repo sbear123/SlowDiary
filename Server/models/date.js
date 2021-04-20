@@ -21,7 +21,8 @@ module.exports = (sequelize, DataTypes) => {
     year: DataTypes.INTEGER,
     month: DataTypes.INTEGER,
     date: DataTypes.INTEGER,
-    write: DataTypes.INTEGER
+    written: DataTypes.INTEGER,
+    picture: DataTypes.INTEGER
   }, {
     timestamps: false,
     sequelize,

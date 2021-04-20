@@ -23,16 +23,13 @@ module.exports = {
       },
       content: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       satisfaction: {
         type: Sequelize.STRING
       },
       goal: {
         type: Sequelize.STRING
-      },
-      picture: {
-        type: Sequelize.INTEGER
       }
     });
   },

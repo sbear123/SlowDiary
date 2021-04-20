@@ -9,17 +9,24 @@ module.exports = {
       },
       year: {
         allowNull: false,
+        primaryKey: true,
         type: Sequelize.INTEGER
       },
       month: {
         allowNull: false,
+        primaryKey: true,
         type: Sequelize.INTEGER
       },
       date: {
         allowNull: false,
+        primaryKey: true,
         type: Sequelize.INTEGER
       },
-      write: {
+      written: {
+        allowNull: false,
+        type: Sequelize.INTEGER
+      },
+      picture: {
         allowNull: false,
         type: Sequelize.INTEGER
       }

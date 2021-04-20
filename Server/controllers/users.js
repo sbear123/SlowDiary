@@ -6,12 +6,13 @@ function login(req, res) {
     where: {
       id: req.body.id,
       pw: req.body.pw,
-     },
+    },
   }).then(function (users) {
     if (users.length > 0) {
-      res.status(200).json({ name : users[0].name,
-        age : users[0].age,
-        gender : users[0].gender
+      res.status(200).json({
+        name: users[0].name,
+        age: users[0].age,
+        gender: users[0].gender,
       })
     } else {
       res.status(404).send()
@@ -34,29 +35,29 @@ function register(req, res) {
 function checkId(req, res) {
   models.User.findAll({
     where: { id: req.body.id },
-  }).then(function (users) {
-    if (users.length > 0) {
-      res.status(404).send()
-    } else {
-      res.status(200).json({ success: true })
-    }
-  }).catch((_) => res.status(404).send())
+  })
+    .then(function (users) {
+      if (users.length > 0) {
+        res.status(204).send()
+      } else {
+        res.status(200).json({ success: true })
+      }
+    })
+    .catch((_) => res.status(404).send())
 }
 
 function update(req, res) {
-  models.User.findOne({
-     where: { id: req.body.id }
-    }).then(user=> {
-      if (user) {
-        user.update({
-          pw: req.body.pw,
-          name: req.body.name,
-          age: req.body.age,
-          gender: req.body.gender
-        }).then((_) => res.status(204).send())
-        .catch((_) => res.status(404).send(_))
-      }
-    }).catch((_) => res.status(404).send(_))
+  models.User.update(
+    {
+      pw: req.body.pw,
+      name: req.body.name,
+      age: req.body.age,
+      gender: req.body.gender,
+    },
+    { where: { id: req.body.id } }
+      .then((_) => res.status(204).send())
+      .catch((_) => res.status(404).send(_)),
+  )
 }
 
 module.exports = {

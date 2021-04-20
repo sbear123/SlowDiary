@@ -9,6 +9,7 @@ var weatherRouter = require('./routes/weather')
 var pictureRouter = require('./routes/picture')
 var goalRouter = require('./routes/goal')
 var writeRouter = require('./routes/write')
+var homeRouter = require('./routes/home')
 
 const { sequelize } = require('./models')
 
@@ -30,6 +31,7 @@ app.use('/weather', weatherRouter)
 app.use('/picture', pictureRouter)
 app.use('/goal', goalRouter)
 app.use('/write', writeRouter)
+app.use('/home', homeRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

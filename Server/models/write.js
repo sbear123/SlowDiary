@@ -22,10 +22,9 @@ module.exports = (sequelize, DataTypes) => {
     praise: DataTypes.STRING,
     reflection: DataTypes.STRING,
     title: DataTypes.STRING,
-    content: DataTypes.STRING,
+    content: DataTypes.TEXT,
     satisfaction: DataTypes.STRING,
-    goal: DataTypes.STRING,
-    picture: DataTypes.INTEGER
+    goal: DataTypes.STRING
   }, {
     timestamps: false,
     sequelize,
