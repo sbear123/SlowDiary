@@ -41,6 +41,7 @@ function readW(req, res) {
       year: req.body.year,
       month: req.body.month,
       date: req.body.date,
+      picture: -1,
     },
   })
     .then((w) => {
@@ -56,15 +57,22 @@ function readW(req, res) {
 }
 
 function updateW(req, res) {
-  models.Write.update({
-    feel: req.body.feel,
-    praise: req.body.praise,
-    reflection: req.body.reflection,
-    title: req.body.title,
-    content: req.body.content,
-    satisfaction: req.body.satisfaction,
-    goal: req.body.goal,
-  })
+  models.Write.update(
+    {
+      feel: req.body.feel,
+      praise: req.body.praise,
+      reflection: req.body.reflection,
+      title: req.body.title,
+      content: req.body.content,
+      satisfaction: req.body.satisfaction,
+      goal: req.body.goal,
+    },
+    {
+      where: {
+        write: req.body.id,
+      },
+    },
+  )
     .then((_) => res.status(204).send())
     .catch((_) => res.status(404).send(_))
 }

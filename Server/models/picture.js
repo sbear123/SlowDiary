@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type:DataTypes.INTEGER
     },
-    url: DataTypes.BLOB('long'),
+    url: DataTypes.STRING,
     place: DataTypes.STRING,
     tag1: DataTypes.STRING,
     tag2: DataTypes.STRING,

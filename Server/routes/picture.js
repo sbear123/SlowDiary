@@ -3,7 +3,7 @@ var router = express.Router();
 const pictureController = require('../controllers/picture');
 
 /* GET home page. */
-router.post('/create', pictureController.createP);
+router.post('/create',pictureController.uploadImg, pictureController.createP);
 
 router.get('/read', pictureController.readP);
 

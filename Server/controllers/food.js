@@ -15,7 +15,7 @@ async function getList(req, res) {
       let foodJson = JSON.parse(body)
 
       json = foodJson.Grid_20150827000000000226_1.row.filter(
-        (food) => food.TY_CODE == req.body.id,
+        (food) => food.TY_CODE == req.query.id,
       )
 
       res.status(200).json(json)
