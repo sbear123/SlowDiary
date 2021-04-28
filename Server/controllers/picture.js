@@ -1,6 +1,7 @@
 const models = require('../models')
 const multer = require('multer')
 const iconv = require('iconv-lite')
+var fs = require('fs')
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -88,7 +89,9 @@ function updateP(req, res) {
   models.Picture.update(
     {
       place: req.body.place,
-      tag: req.body.tag,
+      tag1: req.body.tag[0],
+      tag2: req.body.tag[1],
+      tag3: req.body.tag[2],
     },
     {
       where: {
@@ -101,20 +104,34 @@ function updateP(req, res) {
 }
 
 function deleteP(req, res) {
-  models.Date.destroy({
+  models.Picture.findOne({
     where: {
-      id: req.query.id,
-      write: req.body.id,
+      id: req.body.id,
     },
   })
-    .then((_) =>
-      models.Picture.destroy({
-        where: { id: req.body.id },
+    .then((p) => {
+      fs.unlink('public' + p.url.slice(21), (err) => {
+        if (err) {
+          console.error(err)
+        }
       })
-        .then((_) => res.status(204).send())
-        .catch((_) => res.status(404).send(_)),
-    )
-    .catch((_) => res.status(404).send(_))
+    })
+    .then((_) => {
+      models.Date.destroy({
+        where: {
+          id: req.query.id,
+          picture: req.body.id,
+        },
+      })
+        .then((_) =>
+          models.Picture.destroy({
+            where: { id: req.body.id },
+          })
+            .then((_) => res.status(204).send())
+            .catch((_) => res.status(404).send(_)),
+        )
+        .catch((_) => res.status(404).send(_))
+    })
 }
 
 module.exports = {
