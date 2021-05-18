@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431FF9F5265207C600FDFE1F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431FF9F4265207C600FDFE1F /* Home.storyboard */; };
+		431FF9FA265207DF00FDFE1F /* Today.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431FF9F9265207DF00FDFE1F /* Today.storyboard */; };
+		431FF9FF2652080600FDFE1F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431FF9FE2652080600FDFE1F /* Profile.storyboard */; };
+		431FFA042652083A00FDFE1F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431FFA032652083A00FDFE1F /* HomeViewController.swift */; };
+		431FFA092652084700FDFE1F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431FFA082652084700FDFE1F /* TodayViewController.swift */; };
+		431FFA0E2652085200FDFE1F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431FFA0D2652085200FDFE1F /* ProfileViewController.swift */; };
+		431FFA1A2652302600FDFE1F /* SetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431FFA192652302600FDFE1F /* SetTableViewCell.swift */; };
 		43DF96B126391CD300D2EC70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DF96B026391CD300D2EC70 /* AppDelegate.swift */; };
 		43DF96B326391CD300D2EC70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DF96B226391CD300D2EC70 /* SceneDelegate.swift */; };
 		43DF96B526391CD300D2EC70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DF96B426391CD300D2EC70 /* ViewController.swift */; };
@@ -15,6 +22,9 @@
 		43DF96BD26391CD300D2EC70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43DF96BB26391CD300D2EC70 /* LaunchScreen.storyboard */; };
 		43DF96C826391CD400D2EC70 /* SlowDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DF96C726391CD400D2EC70 /* SlowDiaryTests.swift */; };
 		43DF96D326391CD400D2EC70 /* SlowDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DF96D226391CD400D2EC70 /* SlowDiaryUITests.swift */; };
+		68FFC0D9EED11848896FB487 /* Pods_SlowDiaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6287EAE88590369C4F8480 /* Pods_SlowDiaryTests.framework */; };
+		AEE44FEA31C81B97508B7B31 /* Pods_SlowDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44162175A2ED9965E325733F /* Pods_SlowDiary.framework */; };
+		DADF84921C65AF0124BC5704 /* Pods_SlowDiary_SlowDiaryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC48EAAAEA78D264A92F1B79 /* Pods_SlowDiary_SlowDiaryUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0792B9525310BB2A3EB47290 /* Pods-SlowDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlowDiary.debug.xcconfig"; path = "Target Support Files/Pods-SlowDiary/Pods-SlowDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		3BF7F35DD53FCF929E46AF44 /* Pods-SlowDiary-SlowDiaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlowDiary-SlowDiaryUITests.debug.xcconfig"; path = "Target Support Files/Pods-SlowDiary-SlowDiaryUITests/Pods-SlowDiary-SlowDiaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		431FF9F4265207C600FDFE1F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		431FF9F9265207DF00FDFE1F /* Today.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Today.storyboard; sourceTree = "<group>"; };
+		431FF9FE2652080600FDFE1F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		431FFA032652083A00FDFE1F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		431FFA082652084700FDFE1F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		431FFA0D2652085200FDFE1F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		431FFA192652302600FDFE1F /* SetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTableViewCell.swift; sourceTree = "<group>"; };
 		43DF96AD26391CD300D2EC70 /* SlowDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlowDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43DF96B026391CD300D2EC70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43DF96B226391CD300D2EC70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +68,13 @@
 		43DF96CE26391CD400D2EC70 /* SlowDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlowDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43DF96D226391CD400D2EC70 /* SlowDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlowDiaryUITests.swift; sourceTree = "<group>"; };
 		43DF96D426391CD400D2EC70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44162175A2ED9965E325733F /* Pods_SlowDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlowDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C6287EAE88590369C4F8480 /* Pods_SlowDiaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlowDiaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B04685EC168D7494A55E759 /* Pods-SlowDiaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlowDiaryTests.debug.xcconfig"; path = "Target Support Files/Pods-SlowDiaryTests/Pods-SlowDiaryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA31AF22467AB1FDCD72F4CB /* Pods-SlowDiaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlowDiaryTests.release.xcconfig"; path = "Target Support Files/Pods-SlowDiaryTests/Pods-SlowDiaryTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB0B8B927452E8ACEE800FCC /* Pods-SlowDiary-SlowDiaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlowDiary-SlowDiaryUITests.release.xcconfig"; path = "Target Support Files/Pods-SlowDiary-SlowDiaryUITests/Pods-SlowDiary-SlowDiaryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DC48EAAAEA78D264A92F1B79 /* Pods_SlowDiary_SlowDiaryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlowDiary_SlowDiaryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6201B918B6DD2EF257CAE71 /* Pods-SlowDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlowDiary.release.xcconfig"; path = "Target Support Files/Pods-SlowDiary/Pods-SlowDiary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE44FEA31C81B97508B7B31 /* Pods_SlowDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68FFC0D9EED11848896FB487 /* Pods_SlowDiaryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +98,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DADF84921C65AF0124BC5704 /* Pods_SlowDiary_SlowDiaryUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		431FFA1526522ED100FDFE1F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				431FFA192652302600FDFE1F /* SetTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		43DF96A426391CD300D2EC70 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +120,8 @@
 				43DF96C626391CD400D2EC70 /* SlowDiaryTests */,
 				43DF96D126391CD400D2EC70 /* SlowDiaryUITests */,
 				43DF96AE26391CD300D2EC70 /* Products */,
+				945A2383430154BECD0A8AF4 /* Pods */,
+				67D495F99225F54EB6B77643 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +138,9 @@
 		43DF96AF26391CD300D2EC70 /* SlowDiary */ = {
 			isa = PBXGroup;
 			children = (
+				43DF96F226392A9F00D2EC70 /* Services */,
+				43DF96F12639244C00D2EC70 /* Models */,
+				43DF96F02639243F00D2EC70 /* ViewModels */,
 				43DF96E626391D1E00D2EC70 /* AppDelegates */,
 				43DF96EC26391D6200D2EC70 /* Controllers */,
 				43DF96EB26391D4A00D2EC70 /* Resources */,
@@ -140,6 +182,9 @@
 			children = (
 				43DF96BB26391CD300D2EC70 /* LaunchScreen.storyboard */,
 				43DF96B626391CD300D2EC70 /* Main.storyboard */,
+				431FF9F9265207DF00FDFE1F /* Today.storyboard */,
+				431FF9F4265207C600FDFE1F /* Home.storyboard */,
+				431FF9FE2652080600FDFE1F /* Profile.storyboard */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -155,9 +200,57 @@
 		43DF96EC26391D6200D2EC70 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				431FFA1526522ED100FDFE1F /* Cell */,
 				43DF96B426391CD300D2EC70 /* ViewController.swift */,
+				431FFA032652083A00FDFE1F /* HomeViewController.swift */,
+				431FFA082652084700FDFE1F /* TodayViewController.swift */,
+				431FFA0D2652085200FDFE1F /* ProfileViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		43DF96F02639243F00D2EC70 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		43DF96F12639244C00D2EC70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		43DF96F226392A9F00D2EC70 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		67D495F99225F54EB6B77643 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44162175A2ED9965E325733F /* Pods_SlowDiary.framework */,
+				DC48EAAAEA78D264A92F1B79 /* Pods_SlowDiary_SlowDiaryUITests.framework */,
+				4C6287EAE88590369C4F8480 /* Pods_SlowDiaryTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		945A2383430154BECD0A8AF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0792B9525310BB2A3EB47290 /* Pods-SlowDiary.debug.xcconfig */,
+				E6201B918B6DD2EF257CAE71 /* Pods-SlowDiary.release.xcconfig */,
+				3BF7F35DD53FCF929E46AF44 /* Pods-SlowDiary-SlowDiaryUITests.debug.xcconfig */,
+				AB0B8B927452E8ACEE800FCC /* Pods-SlowDiary-SlowDiaryUITests.release.xcconfig */,
+				5B04685EC168D7494A55E759 /* Pods-SlowDiaryTests.debug.xcconfig */,
+				AA31AF22467AB1FDCD72F4CB /* Pods-SlowDiaryTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,9 +260,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43DF96D726391CD400D2EC70 /* Build configuration list for PBXNativeTarget "SlowDiary" */;
 			buildPhases = (
+				0F476B9629E8705E4F27C429 /* [CP] Check Pods Manifest.lock */,
 				43DF96A926391CD300D2EC70 /* Sources */,
 				43DF96AA26391CD300D2EC70 /* Frameworks */,
 				43DF96AB26391CD300D2EC70 /* Resources */,
+				56BBC23EFF9A2C92110A03DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,9 +279,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43DF96DA26391CD400D2EC70 /* Build configuration list for PBXNativeTarget "SlowDiaryTests" */;
 			buildPhases = (
+				0BC5889E4EAFC08CBF797A0A /* [CP] Check Pods Manifest.lock */,
 				43DF96BF26391CD400D2EC70 /* Sources */,
 				43DF96C026391CD400D2EC70 /* Frameworks */,
 				43DF96C126391CD400D2EC70 /* Resources */,
+				0F818392C216E51C816C9B2C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,9 +299,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43DF96DD26391CD400D2EC70 /* Build configuration list for PBXNativeTarget "SlowDiaryUITests" */;
 			buildPhases = (
+				516C4842C102333DBD15BB8D /* [CP] Check Pods Manifest.lock */,
 				43DF96CA26391CD400D2EC70 /* Sources */,
 				43DF96CB26391CD400D2EC70 /* Frameworks */,
 				43DF96CC26391CD400D2EC70 /* Resources */,
+				D37D9A256B7EEA6A9E4269F6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,9 +362,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431FF9FF2652080600FDFE1F /* Profile.storyboard in Resources */,
 				43DF96BD26391CD300D2EC70 /* LaunchScreen.storyboard in Resources */,
+				431FF9FA265207DF00FDFE1F /* Today.storyboard in Resources */,
 				43DF96BA26391CD300D2EC70 /* Assets.xcassets in Resources */,
 				43DF96B826391CD300D2EC70 /* Main.storyboard in Resources */,
+				431FF9F5265207C600FDFE1F /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,14 +387,138 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0BC5889E4EAFC08CBF797A0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SlowDiaryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0F476B9629E8705E4F27C429 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SlowDiary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0F818392C216E51C816C9B2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SlowDiaryTests/Pods-SlowDiaryTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SlowDiaryTests/Pods-SlowDiaryTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SlowDiaryTests/Pods-SlowDiaryTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		516C4842C102333DBD15BB8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SlowDiary-SlowDiaryUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56BBC23EFF9A2C92110A03DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SlowDiary/Pods-SlowDiary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SlowDiary/Pods-SlowDiary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SlowDiary/Pods-SlowDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D37D9A256B7EEA6A9E4269F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SlowDiary-SlowDiaryUITests/Pods-SlowDiary-SlowDiaryUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SlowDiary-SlowDiaryUITests/Pods-SlowDiary-SlowDiaryUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SlowDiary-SlowDiaryUITests/Pods-SlowDiary-SlowDiaryUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		43DF96A926391CD300D2EC70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431FFA1A2652302600FDFE1F /* SetTableViewCell.swift in Sources */,
+				431FFA0E2652085200FDFE1F /* ProfileViewController.swift in Sources */,
 				43DF96B526391CD300D2EC70 /* ViewController.swift in Sources */,
 				43DF96B126391CD300D2EC70 /* AppDelegate.swift in Sources */,
+				431FFA092652084700FDFE1F /* TodayViewController.swift in Sources */,
 				43DF96B326391CD300D2EC70 /* SceneDelegate.swift in Sources */,
+				431FFA042652083A00FDFE1F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +691,7 @@
 		};
 		43DF96D826391CD400D2EC70 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0792B9525310BB2A3EB47290 /* Pods-SlowDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -484,6 +711,7 @@
 		};
 		43DF96D926391CD400D2EC70 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6201B918B6DD2EF257CAE71 /* Pods-SlowDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -503,6 +731,7 @@
 		};
 		43DF96DB26391CD400D2EC70 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B04685EC168D7494A55E759 /* Pods-SlowDiaryTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -525,6 +754,7 @@
 		};
 		43DF96DC26391CD400D2EC70 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA31AF22467AB1FDCD72F4CB /* Pods-SlowDiaryTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -547,6 +777,7 @@
 		};
 		43DF96DE26391CD400D2EC70 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BF7F35DD53FCF929E46AF44 /* Pods-SlowDiary-SlowDiaryUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -567,6 +798,7 @@
 		};
 		43DF96DF26391CD400D2EC70 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB0B8B927452E8ACEE800FCC /* Pods-SlowDiary-SlowDiaryUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
