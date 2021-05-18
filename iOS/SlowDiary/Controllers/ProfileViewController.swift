@@ -12,10 +12,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     let changeImage = ["person.fill", "power"]
     let sections: [String] = ["정보수정", "로그아웃"]
     
-    @IBOutlet var UIView: UIView!
-    @IBOutlet public var Name: UILabel!
-    @IBOutlet public var Check: UILabel!
-    @IBOutlet public var School: UILabel!
     @IBOutlet var tableview: UITableView!
     
     override func viewDidLoad() {
@@ -41,17 +37,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath) as! SetTableViewCell
         
-        if indexPath.section == 0 {
-            cell.title.text = sections[indexPath.section]
-            cell.icon.image = UIImage(systemName: changeImage[indexPath.section])
-            cell.nextIcon.image = UIImage(systemName: "chevron.right")
-        } else {
-            cell.title.text = "로그아웃"
-            cell.icon.image = UIImage(systemName: "power")
-            cell.nextIcon.image = UIImage(systemName: "chevron.right")
-        }
+        cell.title.text = sections[indexPath.section]
+        cell.icon.image = UIImage(systemName: changeImage[indexPath.section])
+        cell.nextIcon.image = UIImage(systemName: "chevron.right")
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableview.deselectRow(at: indexPath, animated: false)
     }
 
 }
