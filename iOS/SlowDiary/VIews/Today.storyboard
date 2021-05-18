@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today-->
+        <scene sceneID="bmQ-9f-rAK">
+            <objects>
+                <viewController storyboardIdentifier="TodayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kj5-I3-0Aw" customClass="TodayViewController" customModule="SlowDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4aH-GS-vWm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60P-0t-kGf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1023"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xF-zd-Sj9">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="AAH-mf-9zj"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0xF-zd-Sj9" firstAttribute="bottom" secondItem="LjJ-UA-RVW" secondAttribute="bottom" id="0h8-o9-QIo"/>
+                                    <constraint firstItem="0xF-zd-Sj9" firstAttribute="leading" secondItem="LjJ-UA-RVW" secondAttribute="leading" id="XJR-T7-SI6"/>
+                                    <constraint firstItem="0xF-zd-Sj9" firstAttribute="width" secondItem="3eg-fR-f2d" secondAttribute="width" id="XhV-L0-b5d"/>
+                                    <constraint firstItem="0xF-zd-Sj9" firstAttribute="top" secondItem="LjJ-UA-RVW" secondAttribute="top" id="dRj-Of-d2C"/>
+                                    <constraint firstItem="0xF-zd-Sj9" firstAttribute="trailing" secondItem="LjJ-UA-RVW" secondAttribute="trailing" id="i7e-Wk-h39"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="LjJ-UA-RVW"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="3eg-fR-f2d"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1BN-9N-tFG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1BN-9N-tFG" firstAttribute="trailing" secondItem="60P-0t-kGf" secondAttribute="trailing" id="C6Y-R6-pEh"/>
+                            <constraint firstItem="60P-0t-kGf" firstAttribute="leading" secondItem="1BN-9N-tFG" secondAttribute="leading" id="Rh4-cT-znL"/>
+                            <constraint firstItem="1BN-9N-tFG" firstAttribute="bottom" secondItem="60P-0t-kGf" secondAttribute="bottom" id="emv-zQ-UzP"/>
+                            <constraint firstItem="60P-0t-kGf" firstAttribute="top" secondItem="1BN-9N-tFG" secondAttribute="top" id="m8t-hZ-kJf"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Today" image="doc.append.fill" catalog="system" id="rQf-UU-hm6">
+                        <color key="badgeColor" red="0.94901960784313721" green="0.71372549019607845" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <size key="freeformSize" width="414" height="1150"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Czv-0f-T4i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.91304347826087" y="150.66964285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc.append.fill" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
