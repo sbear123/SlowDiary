@@ -13,6 +13,7 @@ target 'SlowDiary' do
   pod 'ObjectMapper'
   pod 'Floaty', '~> 4.1.0'
   pod 'Then'
+  pod 'FSCalendar'
 
   target 'SlowDiaryTests' do
     inherit! :search_paths
@@ -24,6 +25,7 @@ target 'SlowDiary' do
     pod 'ObjectMapper'
     pod 'Floaty', '~> 4.1.0'
     pod 'Then'
+    pod 'FSCalendar'
   end
 
   target 'SlowDiaryUITests' do
