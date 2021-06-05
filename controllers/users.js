@@ -38,7 +38,7 @@ function checkId(req, res) {
   })
     .then(function (users) {
       if (users.length > 0) {
-        res.status(204).send()
+        res.status(409).send()
       } else {
         res.status(200).json({ success: true })
       }
