@@ -18,7 +18,7 @@ const uploadImg = multer({ storage: storage }).single('image')
 
 function createP(req, res) {
   var date = new Date()
-  var uri = 'http://localhost:3000' + req.file.path.slice(6)
+  var uri = 'http://10.80.161.67:3000' + req.file.path.slice(6)
   models.Picture.create({
     url: uri,
     place: req.body.place,
@@ -32,14 +32,19 @@ function createP(req, res) {
       })
         .then((dataValues) => {
           models.Date.create({
-            id: req.query.id,
+            id: req.body.id,
             year: date.getFullYear(),
             month: date.getMonth() + 1,
             date: date.getDate(),
             written: -1,
             picture: dataValues.id,
           })
-            .then((_) => res.status(201).json({ id: dataValues.id }))
+            .then((_) =>
+              res.status(201).json({
+                id: dataValues.id,
+                url: dataValues.url,
+              }),
+            )
             .catch((_) => res.status(401).send(_))
         })
         .catch((_) => res.status(404).send(_))
@@ -50,16 +55,20 @@ function createP(req, res) {
 function readP(req, res) {
   models.Date.findAll({
     where: {
-      id: req.body.id,
-      year: req.body.year,
-      month: req.body.month,
-      date: req.body.date,
+      id: req.query.id,
+      year: req.query.year,
+      month: req.query.month,
+      date: req.query.date,
       written: -1,
     },
   })
     .then((p) => {
       forLoop(p).then((value) => {
-        res.status(200).json(value)
+        var arr = new Array()
+        for (var i = 0; i < value.length; i++) {
+          arr.push(value[i].dataValues)
+        }
+        res.status(200).json(arr)
       })
     })
     .catch((_) => res.status(402).send(_))
@@ -99,7 +108,7 @@ function updateP(req, res) {
       },
     },
   )
-    .then((_) => res.status(204).send())
+    .then((_) => res.status(204).json({ success: true }))
     .catch((_) => res.status(404).send(_))
 }
 
@@ -127,7 +136,7 @@ function deleteP(req, res) {
           models.Picture.destroy({
             where: { id: req.body.id },
           })
-            .then((_) => res.status(204).send())
+            .then((_) => res.status(204).json({ success: true }))
             .catch((_) => res.status(404).send(_)),
         )
         .catch((_) => res.status(404).send(_))

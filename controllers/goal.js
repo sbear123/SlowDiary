@@ -13,10 +13,10 @@ function createG(req, res) {
 }
 
 function readG(req, res) {
-  var date = req.body.date.split('.')
+  var date = req.query.date.split('.')
   models.Goal.findOne({
     where: {
-      id: req.body.id,
+      id: req.query.id,
       year: date[0],
       month: date[1],
     },
@@ -42,7 +42,7 @@ function updateG(req, res) {
       },
     },
   )
-    .then((_) => res.status(204).send())
+    .then((_) => res.status(204).json({ success: true }))
     .catch((_) => res.status(404).send(_))
 }
 
@@ -55,7 +55,7 @@ function deleteG(req, res) {
       month: date[1],
     },
   })
-    .then((_) => res.status(204).send())
+    .then((_) => res.status(204).json({ success: true }))
     .catch((_) => res.status(404).send(_))
 }
 

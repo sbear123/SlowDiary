@@ -1,14 +1,16 @@
-var express = require('express');
-var router = express.Router();
-const writeController = require('../controllers/write');
+var express = require('express')
+var router = express.Router()
+const writeController = require('../controllers/write')
 
 /* GET home page. */
-router.post('/create', writeController.createW);
+router.post('/create', writeController.createW)
 
-router.get('/read', writeController.readW);
+router.get('/read', writeController.readW)
 
-router.patch('/update', writeController.updateW);
+router.patch('/update/content', writeController.updateC)
 
-router.delete('/delete', writeController.deleteW);
+router.patch('/update/write', writeController.updateW)
 
-module.exports = router;
+router.delete('/delete', writeController.deleteW)
+
+module.exports = router

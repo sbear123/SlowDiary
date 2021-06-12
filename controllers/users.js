@@ -4,8 +4,8 @@ const models = require('../models')
 function login(req, res) {
   models.User.findAll({
     where: {
-      id: req.body.id,
-      pw: req.body.pw,
+      id: req.query.id,
+      pw: req.query.pw,
     },
   }).then(function (users) {
     if (users.length > 0) {
@@ -33,14 +33,14 @@ function register(req, res) {
 }
 
 function checkId(req, res) {
-  models.User.findAll({
-    where: { id: req.body.id },
+  models.User.findOne({
+    where: { id: req.query.id },
   })
-    .then(function (users) {
-      if (users.length > 0) {
-        res.status(409).send()
-      } else {
+    .then((user) => {
+      if (user == null) {
         res.status(200).json({ success: true })
+      } else {
+        res.status(409).send()
       }
     })
     .catch((_) => res.status(404).send())
@@ -55,7 +55,7 @@ function update(req, res) {
       gender: req.body.gender,
     },
     { where: { id: req.body.id } }
-      .then((_) => res.status(204).send())
+      .then((_) => res.status(204).json({ success: true }))
       .catch((_) => res.status(404).send(_)),
   )
 }

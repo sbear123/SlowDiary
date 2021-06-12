@@ -11,8 +11,8 @@ async function weather(req, res) {
   var yesterday = Object()
   var today = Object()
   var tomorrow = Object()
-  let lat = req.body.lat
-  let lon = req.body.lon
+  let lat = req.query.lat
+  let lon = req.query.lon
   var url = `http://api.openweathermap.org/data/2.5/onecall/timemachine?lat=${lat}&lon=${lon}&units=metric&dt=${changeTime()}&appid=${apiKey}&lang=kr`
 
   request.get(

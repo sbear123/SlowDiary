@@ -37,10 +37,10 @@ function createW(req, res) {
 function readW(req, res) {
   models.Date.findOne({
     where: {
-      id: req.body.id,
-      year: req.body.year,
-      month: req.body.month,
-      date: req.body.date,
+      id: req.query.id,
+      year: req.query.year,
+      month: req.query.month,
+      date: req.query.date,
       picture: -1,
     },
   })
@@ -63,17 +63,31 @@ function updateW(req, res) {
       praise: req.body.praise,
       reflection: req.body.reflection,
       title: req.body.title,
-      content: req.body.content,
       satisfaction: req.body.satisfaction,
       goal: req.body.goal,
     },
     {
       where: {
-        write: req.body.id,
+        id: req.body.id,
       },
     },
   )
-    .then((_) => res.status(204).send())
+    .then((_) => res.status(204).json({ success: true }))
+    .catch((_) => res.status(404).send(_))
+}
+
+function updateC(req, res) {
+  models.Write.update(
+    {
+      content: req.body.content,
+    },
+    {
+      where: {
+        id: req.body.id,
+      },
+    },
+  )
+    .then((_) => res.status(204).json({ success: true }))
     .catch((_) => res.status(404).send(_))
 }
 
@@ -88,7 +102,7 @@ function deleteW(req, res) {
       models.Write.destroy({
         where: { id: req.body.id },
       })
-        .then((_) => res.status(204).send())
+        .then((_) => res.status(204).json({ success: true }))
         .catch((_) => res.status(404).send(_))
     })
     .catch((_) => res.status(404).send(_))
@@ -98,5 +112,6 @@ module.exports = {
   createW: createW,
   readW: readW,
   updateW: updateW,
+  updateC: updateC,
   deleteW: deleteW,
 }
