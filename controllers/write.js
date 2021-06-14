@@ -7,9 +7,36 @@ function createW(req, res) {
     praise: req.body.praise,
     reflection: req.body.reflection,
     title: req.body.title,
-    content: req.body.content,
     satisfaction: req.body.satisfaction,
     goal: req.body.goal,
+  })
+    .then((_) => {
+      models.Write.findOne({
+        order: [['id', 'DESC']],
+      })
+        .then((w) => {
+          models.Date.create({
+            id: req.body.id,
+            year: date.getFullYear(),
+            month: date.getMonth() + 1,
+            date: date.getDate(),
+            written: w.id,
+            picture: -1,
+          })
+            .then((_) => res.status(201).json({ id: w.id }))
+            .catch((_) =>
+              res.status(409).json({ message: '이미 작성된 글이 존재합니다.' }),
+            )
+        })
+        .catch((_) => res.status(404).send(_))
+    })
+    .catch((_) => res.status(404).send(_))
+}
+
+function createC(req, res) {
+  var date = new Date()
+  models.Write.create({
+    content: req.body.content,
   })
     .then((_) => {
       models.Write.findOne({
@@ -110,6 +137,7 @@ function deleteW(req, res) {
 
 module.exports = {
   createW: createW,
+  createC: createC,
   readW: readW,
   updateW: updateW,
   updateC: updateC,

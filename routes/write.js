@@ -3,6 +3,8 @@ var router = express.Router()
 const writeController = require('../controllers/write')
 
 /* GET home page. */
+router.post('/create/content', writeController.createC)
+
 router.post('/create', writeController.createW)
 
 router.get('/read', writeController.readW)

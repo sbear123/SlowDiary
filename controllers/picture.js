@@ -128,7 +128,7 @@ function deleteP(req, res) {
     .then((_) => {
       models.Date.destroy({
         where: {
-          id: req.query.id,
+          id: req.body.userid,
           picture: req.body.id,
         },
       })
